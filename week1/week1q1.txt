@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+void search(int a[],int n,int k)
+{
+    int c=0;
+    for(int i=1;i<=n;i++)
+    {
+      c++;
+      if(a[i]==k)
+      {
+        cout<<"present "<<c;
+        break;
+      }
+      if(c==n)
+      cout<<"not present "<<c;
+    }
+}
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=1;i<=n;i++)
+    {
+        cin>>a[i];
+    }
+    int k;
+    cin>>k;
+    search(a,n,k);
+    }
+    return 0;
+}
